@@ -1,0 +1,25 @@
+/*Контейнер загальний для всіх секцій*/
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*Оверлей*/
+.overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $hero-background-color;
+    background-image: linear-gradient(to right,
+        $hero-background-color,
+        $hero-background-color
+        ), url(../images/Img-hero.jpg),
+        url(../images/ImgOverlay.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -1,0 +1,158 @@
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 528px;
+    height: 581px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    background: $primary-backgroud-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform $time-duration $timing-function;
+
+    &__button--close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 8px;
+        top: 8px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    
+        background: $primary-backgroud-color;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        color: #000;
+        border-radius: 50%;
+    
+        transition: color $time-duration $timing-function;
+    }
+    &__button--close:hover,
+    &__button--close:focus {
+        color: $accent-color;
+    }
+    &__form {
+        margin: 0px;
+        padding: 40px;
+        min-width: 100%;
+    }
+    &__header {
+        margin-top: 0px;
+        margin-bottom: 12px;
+    
+        font-weight: $header-button-font-weight;
+        font-size: 20px;
+        line-height: 1.15;
+        text-align: center;
+    
+        color: $secondary-text-color;
+    }
+    &__label:not(:last-of-type) {
+        display: block;
+        margin-bottom: 10px;
+        min-width: 100%;
+    }
+    &__label:last-of-type {
+        display: block;
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+    &__label:focus-within &__icon{
+        color: $accent-color;
+    }
+    &__label:focus-within &__input{
+        border: 1px solid $accent-color;
+        outline: transparent;
+    }
+    &__text {
+        display: block;
+        margin-bottom: 4px;
+    
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+    
+        color: $primary-text-color;
+    }
+    &__container {
+        position: relative;
+    }
+    &__input {
+        min-width: 100%;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-left: 42px;
+    
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+    
+        transition: border $time-duration $timing-function;
+    }
+    &__icon {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+    
+        color: $secondary-text-color;
+        background-color: $primary-backgroud-color;
+    
+        transition: color $time-duration $timing-function;
+    }
+    
+    &__icon-svg {
+        width: 12px;
+        height: 12px;
+        fill: currentColor;
+    }
+    &__input-text {
+        padding-left: 16px;
+    
+        height: 120px;
+        font-weight: $main-font-weight;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+    
+        color: rgba(117, 117, 117, 0.5);
+    }
+    
+    &__button--send {
+        width: 200px;
+        height: 50px;
+        font-weight: $header-button-font-weight;
+        font-size: 16px;
+        line-height: 1.88;
+    
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    
+    
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 0.06em;
+    
+        color: $primary-backgroud-color;
+        background: $accent-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        cursor: pointer;
+    
+        transition: border $time-duration $timing-function, outline-color $time-duration $timing-function;
+    }
+    &__button--send:focus,
+    &__button--send:hover {
+        border: 1px solid $accent-color;
+        outline-color: $accent-color;
+    }
+}

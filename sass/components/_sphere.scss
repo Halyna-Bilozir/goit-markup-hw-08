@@ -1,0 +1,60 @@
+/* Сфера дільності*/
+.sphere {
+    padding-bottom: 94px;
+    background-color: $primary-backgroud-color;
+
+    &__header {
+        font-weight: $header-button-font-weight;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+    
+        color: $secondary-text-color;
+    
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+    &__list {
+        padding-left: 0px;
+        display: flex;
+    }
+    &__item {
+        position: relative;
+    }
+    &__item:not(:last-of-type) {
+        margin-right: 30px;
+    }
+    &__link::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 70px;
+    
+        background: rgba(47, 48, 58, 0.8);
+    }
+    &__image {
+        width: 370px;
+        height: 294px;
+    
+        display: block;
+    }
+    &__text {
+        position: absolute;
+        bottom: 27px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        display: inline-block;
+        font-weight: $header-button-font-weight;
+        font-size: 14px;
+        line-height: 1.17;
+        min-width: max-content;
+        text-transform: uppercase;
+    
+        color: $primary-backgroud-color;
+    }
+}

@@ -1,0 +1,30 @@
+
+/*Забираємо точки в списках і підкреслення ссилок*/
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/*Загальне для body*/
+body {
+    font-family: $main-font-family;
+    font-weight: $main-font-weight;
+    letter-spacing: 0.03em;
+
+    background-color: $primary-backgroud-color;
+}
+
+/*Забираємо нижній і верхній маржен*/
+ul,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+

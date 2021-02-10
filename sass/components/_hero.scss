@@ -1,0 +1,36 @@
+/*Оформлення секції героя. Секція, в якій можна замовити послугу*/
+.hero {
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: $primary-backgroud-color;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    &__header {
+        font-weight: $hero-font-weight;
+        font-size: 44px;
+        line-height: 1.36;
+        text-transform: uppercase;
+    
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    &__button {
+        font-weight: $header-button-font-weight;
+        font-size: 16px;
+        line-height: 1.88;
+    
+        color: $primary-backgroud-color;
+        background-color: $accent-color;
+    
+        padding-top: 10px;
+        padding-right: 32px;
+        padding-bottom: 10px;
+        padding-left: 32px;
+        border-radius: 4px;
+        border: 0px;
+        
+        cursor: pointer;
+    }    
+}

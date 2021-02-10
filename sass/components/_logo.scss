@@ -1,0 +1,21 @@
+/*Логотип для хеaдеру і футеру*/
+.logo {
+    font-family: $logo-font-family;
+    font-weight: $header-button-font-weight;
+    font-size: 26px;
+    line-height: 1.19;
+
+    &__accent {
+        color: $accent-color;
+    }
+    &__header { 
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    
+        color: $secondary-text-color;
+    }
+    &__footer {
+        color: $primary-backgroud-color;
+    }    
+}

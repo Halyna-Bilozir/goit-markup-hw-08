@@ -1,0 +1,11 @@
+/*Хеадер для двох сторінок*/
+.page-header {
+    border-bottom: 1px solid $header-line-color;
+    background-color: $primary-backgroud-color;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+}
+

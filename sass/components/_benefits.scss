@@ -1,0 +1,53 @@
+/*Оформлення секції переваг*/
+.benefits {
+    font-size: 14px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    background-color: $primary-backgroud-color;
+
+    &__header {
+        margin: 0px;
+    }
+    &__list {
+        padding-left: 0px;
+        display: flex;
+    }
+    &__item:not(:last-of-type) {
+        margin-right: 30px;
+    }
+    &__links {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    
+        width: 270px;
+        height: 120px;
+    
+        background:$team-background-color;
+        border-radius: 4px;
+    }
+    &__icon {
+        width: 70px;
+        height: 70px;
+        fill: $secondary-text-color;
+    }
+    &__h3header {
+        font-size: 14px;
+        font-weight: $header-button-font-weight;
+        line-height: 1.14;
+        text-transform: uppercase;
+    
+        color: $secondary-text-color;
+    
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    &__text {
+        font-weight: $main-font-weight;
+        line-height: 1.71;
+    
+        color: $primary-text-color;
+    }    
+}
