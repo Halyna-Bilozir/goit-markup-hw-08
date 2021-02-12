@@ -4,6 +4,8 @@
     background-color: $primary-backgroud-color;
 
     &__container {
+        position: relative;
+        
         display: flex;
         align-items: center;
     }

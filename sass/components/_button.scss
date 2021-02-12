@@ -8,14 +8,14 @@
     line-height: 1.63;
 
     &__list {
-        text-align: center;
-        display: flex;
-        padding-left: 0px;
-        padding-bottom: 50px;
-        justify-content: center;
+        // text-align: center;
+        // display: flex;
+        // padding-left: 0px;
+        // padding-bottom: 50px;
+        // justify-content: center;
     }
     &__item:not(:last-of-type) {
-        margin-right: 8px;
+        // margin-right: 8px;
     }
     &__main {
         color: $primary-backgroud-color;
@@ -24,17 +24,17 @@
     }
     &__main,
     &__secondary {
-        display: block;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        padding-right: 22px;
-        padding-left: 22px;
+        // display: block;
+        // padding-top: 6px;
+        // padding-bottom: 6px;
+        // padding-right: 22px;
+        // padding-left: 22px;
     
         border: 2px solid transparent;
         border-radius: 4px;
         cursor: pointer;
     
-        transition: color $time-duration $timing-function, background-color $time-duration $timing-function, box-shadow $time-duration $timing-function;
+        // transition: color $time-duration $timing-function, background-color $time-duration $timing-function, box-shadow $time-duration $timing-function;
     }
     &__secondary {
         background: $team-background-color;

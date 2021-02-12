@@ -2,38 +2,38 @@
 .footer {
     font-size: 14px;
     line-height: 1.71;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    // padding-top: 60px;
+    // padding-bottom: 60px;
 
     background-color: $secondary-backgroud-color;
 
     &__container {
-        display: flex;
+        // display: flex;
     }
     /*Блок контактів*/
     &__contacts {
-        margin-right: 70px;
+        // margin-right: 70px;
         min-width: 231px;
     }
     &__address {
         font-style: inherit;
         
-        padding: 0px;
-        margin-top: 20px;
+        // padding: 0px;
+        // margin-top: 20px;
     
         color: $primary-backgroud-color;
     }
     &__contact { 
         color: $transparent-text-color;
-        display: block;
-        margin-top: 9px;
+        // display: block;
+        // margin-top: 9px;
     }
     /*Блок соціальних мереж*/
     &__social {
-        padding-top: 12px;
-        padding-bottom: 40px;
-        padding-left: 0px;
-        margin-right: 93px;
+        // padding-top: 12px;
+        // padding-bottom: 40px;
+        // padding-left: 0px;
+        // margin-right: 93px;
     }
     &__header {
         font-family: $main-font-family;
@@ -42,31 +42,31 @@
         line-height: 1.14;
         text-transform: uppercase;
     
-        margin-top: 0px;
-        margin-bottom: 20px;
+        // margin-top: 0px;
+        // margin-bottom: 20px;
     
         color: $primary-backgroud-color;
     }
     /*Форма у футері*/
     &__form {
-        padding-top: 12px;
-        padding-bottom: 40px;
-        padding-left: 0px;
-        margin-right: auto;
+        // padding-top: 12px;
+        // padding-bottom: 40px;
+        // padding-left: 0px;
+        // margin-right: auto;
     }
     &__subscribe {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        // display: inline-flex;
+        // align-items: center;
+        // justify-content: center;
     }
     &__input {
         width: 358px;
         height: 50px;
-        padding-left: 16px;
+        // padding-left: 16px;
+        // margin-right: 12px;
     
         font-size: 16px;
         line-height: 20px;
-        margin-right: 12px;
     
         color: rgba(255, 255, 255, 0.6);
         background-color: $secondary-backgroud-color;
@@ -76,7 +76,7 @@
         border-radius: 4px;
         outline-color: $secondary-backgroud-color;
     
-        transition: border $time-duration $timing-function, outline-color $time-duration $timing-function;
+        // transition: border $time-duration $timing-function, outline-color $time-duration $timing-function;
     }
     &__input:focus {
         border: 1px solid $accent-color;
@@ -86,13 +86,14 @@
         width: 200px;
         height: 50px;
         letter-spacing: 0.06em;
-        padding-top: 10px;
-        padding-bottom: 10px;
         font-weight: $header-button-font-weight;
+
+        // padding-top: 10px;
+        // padding-bottom: 10px;
     
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        // display: inline-flex;
+        // align-items: center;
+        // justify-content: center;
     
         background-color: $accent-color;
         color: $primary-backgroud-color;
@@ -100,7 +101,7 @@
         border-radius: 4px;
         cursor: pointer;
     
-        transition: border $time-duration $timing-function, outline-color $time-duration $timing-function;
+        // transition: border $time-duration $timing-function, outline-color $time-duration $timing-function;
     }
     &__button:focus,
     &__button:hover {
@@ -108,7 +109,7 @@
         outline-color: $accent-color;
     }
     &__iconsend {
-        margin-left: 10px;
+        // margin-left: 10px;
         fill: currentColor;
     }
     
@@ -118,7 +119,7 @@
     background-color: $bg-footer-icon;
     color: $primary-backgroud-color;
 
-    transition: background-color $time-duration $timing-function;
+    // transition: background-color $time-duration $timing-function;
 }
 .footer-social__link:hover,
 .footer-social__link:focus {
