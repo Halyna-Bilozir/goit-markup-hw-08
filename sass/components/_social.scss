@@ -1,16 +1,16 @@
 /*Список соціальних мереж*/
 .social__links {
-    // padding-left: 0px;
-    // display: flex;
-    // justify-content: center;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
 }
 .social__item:not(:last-of-type) {
-    // margin-right: 10px;
+    margin-right: 10px;
 }
 .social__link {
-    // display: inline-flex;
-    // justify-content: center;
-    // align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
     width: 44px;
     height: 44px;
