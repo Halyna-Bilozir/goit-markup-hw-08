@@ -1,49 +1,173 @@
-.menu-button {
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
+.menu__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+   
         
     border: none;
     background-color: transparent;
+    box-sizing: border-box;
+    color: #000;
+
+    &:hover, &:focus, &:active {
+        color: $accent-color;
+
+        & .menu__container {
+            transform: translateX(0);
+        }
+    }
 
     @media screen and (min-width:768px) {
         display: none;
     }
 }
-.menu__icon {
-    width: 40px;
-    height: 40px;
+.menu__button-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px;
+   
+        
+    border: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    color: #000;
+
+    &:hover, &:focus, &:active {
+        color: $accent-color;
+
+        & .menu__container {
+            transform: translateX(-100%);
+        }
+    }
 }
-// .menu__icon-close, .menu__icon-menu {
-//     display: flex;
-//     align-items: center;
-// }
-// .menu__button .menu__icon-close {
-//     display: none;
-// }
-// .menu__button .menu__icon-menu {
-//     display: flex;
-//     align-items: center;
-// }
-// .menu__button.is-open .menu__icon-close {
-//     display: block;
-// }
-// .menu__button.is-open .menu__icon-menu {
-//     display: none;
-// }
-// .menu__container {
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
+.menu__icon-close,
+.menu__icon-menu {
+    fill: currentColor;
+}
 
-//     width:100%;
-//     height:796px;
+.menu__container {
+    position: relative;
 
-// }
-// .menu__container .is-open {
-//     display: block; 
-// }
+    transition: transform $time-duration $timing-function;
+   
+    @media screen and (max-width: 767px) {
+        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        padding-top: 48px;
+        padding-bottom: 48px;
+        padding-left: 40px;
+        padding-right: 40px;
+        
+        width:100%;
+        height:796px;
+        background-color: $primary-backgroud-color;
+    
+        transform: translateX(-100%);
+    }
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+// Розмітка меню в телефонній версії
+.menu__nav {
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    text-align: left;
+
+    color: $secondary-text-color;
+
+    font-weight: $nav-filter-name-font-weight;
+    font-family: $main-font-family;
+}
+.menu__list {
+    padding-left: 0;
+}
+.menu__item {
+    &:not(:last-of-type) {
+        margin-bottom: 32px;
+    }
+    &:last-of-type {
+        margin-bottom: 302px;
+    }
+}
+.menu__link {
+    color: $secondary-text-color;
+    transition: color $time-duration $timing-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+.menu__link--current {
+    color: $accent-color;
+}
+
+.menu__contacts {
+    padding-left: 0px;
+    font-weight: $nav-filter-name-font-weight;
+    letter-spacing: 0.02em;
+}
+.menu__contacts-item {
+    &:nth-of-type(-n+1) {
+        margin-bottom: 32px;
+        font-size: 34px;
+        line-height: 1.18;
+    }
+    &:last-of-type {
+        margin-bottom: 64px;
+        font-size: 24px;
+        line-height: 1.17;
+    }
+}
+
+.menu__contacts-tel,
+.menu__contacts-mail {
+    display: block;
+    
+    color: $primary-text-color;
+
+    transition: color $time-duration $timing-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+.menu__social {
+    padding-left: 0px;
+    display: flex;
+
+    font-family: $main-font-family;
+    font-weight: $nav-filter-name-font-weight;
+    font-size: 18px;
+    line-height: 1.22;
+
+    letter-spacing: 0.02em;
+}
+.menu__social-item {
+    &:not(:last-of-type) {
+        padding-right: 10px;
+        margin-right: 10px;
+
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+.menu__social-link {
+    display: block;
+    color: $primary-text-color;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}

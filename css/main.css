@@ -76,6 +76,98 @@ img {
   }
 }
 
+/*Список кнопок фільтру*/
+/*Загальне для buttons*/
+.button {
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+}
+
+.button__list {
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .button__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 40px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .button__list {
+    padding-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button__list {
+    padding-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.button__item:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .button__item:nth-of-type(-n+3) {
+    margin-bottom: 15px;
+  }
+}
+
+.button__main {
+  color: #FFFFFF;
+  background-color: #2196F3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button__main,
+.button__secondary {
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 22px;
+  padding-left: 22px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button__secondary {
+  background: #F5F4FA;
+  color: #212121;
+}
+
+.button__secondary:hover, .button__secondary:focus {
+  color: #FFFFFF;
+  background-color: #2196F3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 /*Хеадер для двох сторінок*/
 .page-header {
   border-bottom: 1px solid #ECECEC;
@@ -92,12 +184,27 @@ img {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .page-header__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 /*Логотип для хеaдеру і футеру*/
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__accent {
@@ -108,7 +215,7 @@ img {
   color: #212121;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .logo__header {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -119,6 +226,7 @@ img {
   .logo__header {
     padding-top: 26px;
     padding-bottom: 26px;
+    margin-right: 88px;
   }
 }
 
@@ -139,6 +247,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: #212121;
 }
 
@@ -148,34 +258,83 @@ img {
   }
 }
 
-.page-nav__link {
-  color: #212121;
+.page-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
 }
 
-.page-nav__link:hover::after,
-.page-nav__link:focus::after,
-.page-nav__link--current::after {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-nav__list {
+    margin-right: 84px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-nav__list {
+    margin-right: 305px;
+  }
+}
+
+.page-nav__item {
+  position: relative;
+  display: block;
+}
+
+.page-nav__item:not(:last-of-type) {
+  margin-right: 50px;
+}
+
+.page-nav__link {
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.page-nav__link:hover, .page-nav__link:focus {
+  color: #2196F3;
+}
+
+.page-nav__link:hover::after, .page-nav__link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 44px;
+  display: inline-block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: #2196F3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-nav__link--current {
   color: #2196F3;
 }
 
-.page-nav__link:hover,
-.page-nav__link:focus {
-  color: #2196F3;
+.page-nav__link--current::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 44px;
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Контакти*/
 .contacts {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
+  color: #212121;
   color: #212121;
 }
 
@@ -185,41 +344,80 @@ img {
   }
 }
 
-.contacts__tel, .contacts__mail {
-  color: #757575;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    padding-left: 0;
+    display: block;
+  }
 }
 
-.contacts__mail:hover, .contacts__tel:hover, .contacts__mail:focus, .contacts__tel:focus {
+@media screen and (min-width: 1200px) {
+  .contacts {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.14;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-of-type) {
+    margin-right: 30px;
+  }
+}
+
+.contacts__tel,
+.contacts__mail {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #757575;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts__tel:hover, .contacts__tel:focus,
+.contacts__mail:hover,
+.contacts__mail:focus {
   color: #2196F3;
 }
 
 .contacts__icon {
+  margin-right: 10px;
   fill: currentColor;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts__icon:hover, .contacts__icon:focus {
   fill: #2196F3;
 }
 
-.menu-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-.menu__icon {
-  width: 40px;
-  height: 40px;
+.menu__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,6 +427,188 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+}
+
+.menu__button:hover, .menu__button:focus, .menu__button:active {
+  color: #2196F3;
+}
+
+.menu__button:hover .menu__container, .menu__button:focus .menu__container, .menu__button:active .menu__container {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+@media screen and (min-width: 768px) {
+  .menu__button {
+    display: none;
+  }
+}
+
+.menu__button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #000;
+}
+
+.menu__button-close:hover, .menu__button-close:focus, .menu__button-close:active {
+  color: #2196F3;
+}
+
+.menu__button-close:hover .menu__container, .menu__button-close:focus .menu__container, .menu__button-close:active .menu__container {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.menu__icon-close,
+.menu__icon-menu {
+  fill: currentColor;
+}
+
+.menu__container {
+  position: relative;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .menu__container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+    height: 796px;
+    background-color: #FFFFFF;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__container {
+    display: none;
+  }
+}
+
+.menu__nav {
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #212121;
+  font-weight: 500;
+  font-family: Roboto, sans-serif;
+}
+
+.menu__list {
+  padding-left: 0;
+}
+
+.menu__item:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
+.menu__item:last-of-type {
+  margin-bottom: 302px;
+}
+
+.menu__link {
+  color: #212121;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__link:hover, .menu__link:focus {
+  color: #2196F3;
+}
+
+.menu__link--current {
+  color: #2196F3;
+}
+
+.menu__contacts {
+  padding-left: 0px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.menu__contacts-item:nth-of-type(-n+1) {
+  margin-bottom: 32px;
+  font-size: 34px;
+  line-height: 1.18;
+}
+
+.menu__contacts-item:last-of-type {
+  margin-bottom: 64px;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.menu__contacts-tel,
+.menu__contacts-mail {
+  display: block;
+  color: #757575;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu__contacts-tel:hover, .menu__contacts-tel:focus,
+.menu__contacts-mail:hover,
+.menu__contacts-mail:focus {
+  color: #2196F3;
+}
+
+.menu__social {
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+}
+
+.menu__social-item:not(:last-of-type) {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu__social-link {
+  display: block;
+  color: #757575;
+}
+
+.menu__social-link:hover, .menu__social-link:focus {
+  color: #2196F3;
 }
 
 /*Оформлення секції героя. Секція, в якій можна замовити послугу*/
@@ -1133,98 +1513,6 @@ img {
   padding-left: 0px;
 }
 
-/*Список кнопок фільтру*/
-/*Загальне для buttons*/
-.button {
-  font-family: Roboto, sans-serif;
-  letter-spacing: 0.03em;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.63;
-}
-
-.button__list {
-  padding-left: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .button__list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding-bottom: 40px;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .button__list {
-    padding-bottom: 30px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .button__list {
-    padding-bottom: 50px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.button__item:not(:last-of-type) {
-  margin-right: 8px;
-}
-
-@media screen and (max-width: 767px) {
-  .button__item:nth-of-type(-n+3) {
-    margin-bottom: 15px;
-  }
-}
-
-.button__main {
-  color: #FFFFFF;
-  background-color: #2196F3;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.button__main,
-.button__secondary {
-  display: block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-right: 22px;
-  padding-left: 22px;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.button__secondary {
-  background: #F5F4FA;
-  color: #212121;
-}
-
-.button__secondary:hover, .button__secondary:focus {
-  color: #FFFFFF;
-  background-color: #2196F3;
-  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 /*Список карток в портфоліо*/
 .card {
   padding-left: 0px;
@@ -1413,6 +1701,11 @@ img {
 }
 
 .backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);

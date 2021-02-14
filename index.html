@@ -14,7 +14,7 @@
         <!--Верхня лінія. Шапка(на макеті шапка ще перша секція, в мене лише перша лінія). Логотип. Загальна навігація. Контакти. Відображається на кожній сторінці-->
         <header class="page-header">
             <div class="container page-header__container">
-                <a class="logo" href="https://halyna-bilozir.github.io/goit-markup-hw-07/index.html">
+                <a class="logo" href="https://halyna-bilozir.github.io/goit-markup-hw-08/index.html">
                     <span class="logo logo__accent">Web</span><span class="logo logo__header">Studio</span>
                 </a>
                 <nav class="page-nav">
@@ -23,7 +23,7 @@
                             <a href="" lang="ru" class="page-nav__link page-nav__link--current">Студия</a>
                         </li>
                         <li class="page-nav__item">
-                            <a href="https://halyna-bilozir.github.io/goit-markup-hw-07/portfolio.html" lang="ru" class="page-nav__link">Портфолио</a>
+                            <a href="https://halyna-bilozir.github.io/goit-markup-hw-08/portfolio.html" lang="ru" class="page-nav__link">Портфолио</a>
                         </li>
                         <li class="page-nav__item">
                             <a href="" lang="ru" class="page-nav__link">Контакты</a>
@@ -50,25 +50,79 @@
                         </a>
                     </li>
                 </ul>
-                <div class="menu__container" id="menu-container" data-menu>
-                    Content
+                <div class="menu__container">
+                    <button type="button" class="button menu__button-close">
+                        <svg class="menu__icon-close" width="19" height="19">
+                            <use
+                                href="./images/symbol-defs.svg#icon-close-modal";>
+                            </use>
+                        </svg>
+                    </button>
+                    <nav class="menu__nav">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="" lang="ru" class="menu__link menu__link--current">Студия</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="https://halyna-bilozir.github.io/goit-markup-hw-08/portfolio.html" lang="ru" class="menu__link">Портфолио</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" lang="ru" class="menu__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="menu__contacts">
+                        <li class="menu__contacts-item">
+                            <a href="tel:+380961111111" class="menu__contacts-tel">
+                               +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="menu__contacts-item">
+                            <a href="emailto:info@devstudio.com" class="menu__contacts-mail">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="menu__social">
+                        <li class="menu__social-item">
+                            <a class="menu__social-link" href="">Instagram</a>
+                        </li>
+                        <li class="menu__social-item">
+                            <a class="menu__social-link" href="">Twitter</a>
+                        </li>
+                        <li class="menu__social-item">
+                            <a class="menu__social-link" href="">Facebook</a>
+                        </li>
+                        <li class="menu__social-item">
+                            <a class="menu__social-link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
                 </div>
-                <button 
-                    type="button" 
-                    class="menu__button"
-                    aria-expanded="false"
-                    aria-controls="menu-container"
-                    data-menu-button
-                >
-                    <svg class="menu__icon" aria-label="Переключатель мобільного меню">
-                        <use class="menu__icon-close" width="19" height="19"
-                            href="./images/symbol-defs.svg#icon-close-modal";>
-                        </use>
-                        <use class="menu__icon-menu" width="24" height="16"
+                <button type="button"  class="button menu__button">
+                    <svg class="menu__icon-menu" width="24" height="16" >
+                        <use 
                             href="./images/symbol-defs.svg#icon-menu";>
                         </use>
                     </svg>
                 </button>
+                <!-- <button 
+                    type="button" 
+                    class="button menu__button"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button
+                >
+                    <svg class="menu__icon-close" width="19" height="19 aria-label="Переключатель мобільного меню">
+                        <use 
+                            href="./images/symbol-defs.svg#icon-close-modal";>
+                        </use>
+                    </svg>
+                    <svg class="menu__icon-menu" width="24" height="16" aria-label="Переключатель мобільного меню">
+                        <use 
+                            href="./images/symbol-defs.svg#icon-menu";>
+                        </use>
+                    </svg>
+                </button> -->
             </div>
         </header>  
         <!--Вся унікальна інформація на сторінці-->
@@ -429,7 +483,7 @@
         <footer class="footer">
             <div class="container footer__container">
                     <div class="footer__contacts">
-                        <a class="logo" href="https://halyna-bilozir.github.io/goit-markup-hw-06/index.html">
+                        <a class="logo" href="https://halyna-bilozir.github.io/goit-markup-hw-08/index.html">
                             <span class="logo logo__accent">Web</span><span class="logo logo__footer">Studio</span>
                         </a>
                         <address class="footer__address" lang="ru">
@@ -559,6 +613,6 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
-        <script src="./js/menu.js"></script>
+        <!-- <script src="./js/menu.js"></script> -->
     </body>
 </html>

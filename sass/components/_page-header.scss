@@ -2,12 +2,14 @@
 .page-header {
     border-bottom: 1px solid $header-line-color;
     background-color: $primary-backgroud-color;
+}
+.page-header__container {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
 
-    &__container {
-        position: relative;
-        
-        display: flex;
-        align-items: center;
+    @media screen  and (max-width: 767px) {
+        justify-content: space-between;
     }
 }
-
